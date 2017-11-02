@@ -18,6 +18,7 @@ import com.auth.AnonymousAuthActivity;
 import com.auth.EmailPasswordActivity;
 import com.auth.PhoneAuthActivity;
 import com.chat.ChatActivity;
+import com.post.WelcomeActivity;
 import com.storage.ListUserActivity;
 
 public class DashboardActivity extends AppCompatActivity
@@ -105,6 +106,9 @@ public class DashboardActivity extends AppCompatActivity
             startActivity(intent);
         } else if (id == R.id.nav_send) {
             Intent intent = new Intent(DashboardActivity.this, ListUserActivity.class);
+            startActivity(intent);
+        } else if (id == R.id.nav_post) {
+            Intent intent = new Intent(DashboardActivity.this, WelcomeActivity.class);
             startActivity(intent);
         }
 
