@@ -1,0 +1,84 @@
+
+
+for the google login
+
+E:\Stud\demo\firebase_google\friendlychat-master\android-start
+
+keytore file
+friendlychat.jks
+
+password - 123456789
+
+
+
+
+
+create an exported apk file
+
+export key
+
+keytool -exportcert -keystore path-to-debug-or-production-keystore -list -v
+
+
+E:\Stud\demo\firebase_google\friendlychat-master\android-start\friendlychat.jks
+
+
+
+
+
+C:\Users\Admin>keytool -exportcert -keystore E:\Stud\demo\firebase_google\friend
+lychat-master\android-start\friendlychat.jks -list -v
+Enter keystore password:
+
+Keystore type: JKS
+Keystore provider: SUN
+
+Your keystore contains 1 entry
+
+Alias name: friendlychat
+Creation date: Jun 28, 2016
+Entry type: PrivateKeyEntry
+Certificate chain length: 1
+Certificate[1]:
+Owner: CN=prince
+Issuer: CN=prince
+Serial number: 42a64081
+Valid from: Tue Jun 28 19:24:11 IST 2016 until: Sat Jun 22 19:24:11 IST 2041
+Certificate fingerprints:
+         MD5:  03:ED:D0:22:48:C2:24:54:E9:C2:39:BF:77:8D:E3:E6
+         SHA1: B0:0E:B7:3E:FF:83:5B:20:B9:38:86:58:E9:ED:31:56:62:65:52:5D
+         SHA256: CE:C8:32:14:E0:F8:01:F0:24:AC:7A:56:7B:FA:CF:E6:A0:94:D1:9A:95:
+C2:43:02:79:C2:CD:DB:1E:64:5E:63
+         Signature algorithm name: SHA256withRSA
+         Version: 3
+
+Extensions:
+
+#1: ObjectId: 2.5.29.14 Criticality=false
+SubjectKeyIdentifier [
+KeyIdentifier [
+0000: 17 2D 32 04 5F CE 73 0A   95 B3 0D 95 86 C7 2E EF  .-2._.s.........
+0010: D0 20 B0 48                                        . .H
+]
+]
+
+
+
+*******************************************
+*******************************************
+
+
+
+C:\Users\Admin>
+
+
+
+
+
+
+
+
+
+
+
+
