@@ -18,6 +18,7 @@ import com.auth.AnonymousAuthActivity;
 import com.auth.EmailPasswordActivity;
 import com.auth.PhoneAuthActivity;
 import com.chat.ChatActivity;
+import com.storage.ListUserActivity;
 
 public class DashboardActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -103,7 +104,8 @@ public class DashboardActivity extends AppCompatActivity
             Intent intent = new Intent(DashboardActivity.this, AnonymousAuthActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_send) {
-
+            Intent intent = new Intent(DashboardActivity.this, ListUserActivity.class);
+            startActivity(intent);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

@@ -78,6 +78,25 @@
         <activity  android:name="com.auth.EmailPasswordActivity"/>
         <activity  android:name="com.auth.AnonymousAuthActivity"/>
 
+
+        <!--for the storage-->
+        <activity
+            android:name="com.storage.ListUserActivity"
+            android:launchMode="singleTask">
+        </activity>
+        <activity
+            android:name="com.storage.StorageMainActivity"
+            android:launchMode="singleTask">
+        </activity>
+
+        <service
+            android:name="com.storage.MyDownloadService"
+            android:exported="false"/>
+
+        <service
+            android:name="com.storage.MyUploadService"
+            android:exported="false" />
+
     </application>
 
 </manifest>
