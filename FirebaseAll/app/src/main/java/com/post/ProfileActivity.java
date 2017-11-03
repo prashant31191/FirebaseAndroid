@@ -77,6 +77,7 @@ public class ProfileActivity extends BaseActivity implements
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle("My Profile");
         setSupportActionBar(toolbar);
 
         // Initialize authentication and set up callbacks

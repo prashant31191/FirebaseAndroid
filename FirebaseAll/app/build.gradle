@@ -115,6 +115,9 @@ dependencies {
     compile 'org.apache.httpcomponents:httpclient:4.5'
     compile 'com.fasterxml.jackson.core:jackson-databind:2.7.3'
 
+    //for the app update
+    compile 'com.github.javiersantos:AppUpdater:2.6.3'
+
     /*
     // Testing dependencies
     androidTestCompile 'junit:junit:4.12'
@@ -133,6 +136,17 @@ dependencies {
 
 */
 
+}
+
+configurations.all {
+    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+        def requested = details.requested
+        if (requested.group == 'com.android.support') {
+            if (!requested.name.startsWith("multidex")) {
+                details.useVersion '25.3.0'
+            }
+        }
+    }
 }
 // apply the Google Services Plugin
 apply plugin: "com.google.gms.google-services"

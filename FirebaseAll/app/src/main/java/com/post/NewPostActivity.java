@@ -29,6 +29,7 @@ import android.os.Parcelable;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.v4.app.FragmentManager;
+import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
@@ -49,9 +50,7 @@ import pub.devrel.easypermissions.AfterPermissionGranted;
 import pub.devrel.easypermissions.EasyPermissions;
 
 
-public class NewPostActivity extends BaseActivity implements
-        EasyPermissions.PermissionCallbacks,
-        NewPostUploadTaskFragment.TaskCallbacks {
+public class NewPostActivity extends BaseActivity implements EasyPermissions.PermissionCallbacks,NewPostUploadTaskFragment.TaskCallbacks {
     public static final String TAG = "NewPostActivity";
     public static final String TAG_TASK_FRAGMENT = "newPostUploadTaskFragment";
     private static final int THUMBNAIL_MAX_DIMENSION = 640;
@@ -77,7 +76,9 @@ public class NewPostActivity extends BaseActivity implements
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_post);
-
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle("Add Post");
+        setSupportActionBar(toolbar);
         // find the retained fragment on activity restarts
         FragmentManager fm = getSupportFragmentManager();
         mTaskFragment = (NewPostUploadTaskFragment) fm.findFragmentByTag(TAG_TASK_FRAGMENT);
